@@ -1,0 +1,49 @@
+[System]
+Name='fuzzy_c_means'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[2.7 3.5]
+NumMFs=3
+MF1='mf1':'gaussmf',[0.075225645168367 2.84]
+MF2='mf2':'gaussmf',[0.090305440397971 2.97]
+MF3='mf3':'gaussmf',[0.119425044979275 3.23]
+
+[Input2]
+Name='input2'
+Range=[3.75 4.15]
+NumMFs=3
+MF1='mf1':'gaussmf',[0.06569 3.89]
+MF2='mf2':'gaussmf',[0.0511326389969323 3.94]
+MF3='mf3':'gaussmf',[0.0483593433225216 4.04]
+
+[Input3]
+Name='input3'
+Range=[2.6 3.2]
+NumMFs=3
+MF1='mf1':'gaussmf',[0.08824 2.72]
+MF2='mf2':'gaussmf',[0.128438255921106 2.96]
+MF3='mf3':'gaussmf',[0.0993186513398028 2.96]
+
+[Output1]
+Name='output1'
+Range=[4.2 5.2]
+NumMFs=3
+MF1='mf1':'gaussmf',[0.136 4.42]
+MF2='mf2':'gaussmf',[0.0920387501944774 4.66]
+MF3='mf3':'gaussmf',[0.119945037918227 4.83]
+
+[Rules]
+1 1 1, 1 (1) : 1
+2 2 2, 2 (1) : 1
+3 3 3, 3 (1) : 1

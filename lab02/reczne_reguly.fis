@@ -1,0 +1,71 @@
+[System]
+Name='reczne_reguly'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[2.7 3.5]
+NumMFs=3
+MF1='r':'gaussmf',[0.209409502081596 2.7]
+MF2='y':'gaussmf',[0.128521711577976 3.1]
+MF3='g':'gaussmf',[0.209409502081596 3.5]
+
+[Input2]
+Name='input2'
+Range=[3.7 4.2]
+NumMFs=3
+MF1='r':'gaussmf',[0.1475913291725 3.69]
+MF2='y':'gaussmf',[0.0612275636451018 3.95]
+MF3='g':'gaussmf',[0.13909811116962 4.2]
+
+[Input3]
+Name='input3'
+Range=[2.6 3.2]
+NumMFs=3
+MF1='r':'gaussmf',[0.158597846380314 2.6]
+MF2='y':'gaussmf',[0.0869543747913929 2.9]
+MF3='g':'gaussmf',[0.160677818136121 3.2]
+
+[Output1]
+Name='output1'
+Range=[4.2 5.11]
+NumMFs=3
+MF1='r':'gaussmf',[0.246849314669425 4.2]
+MF2='y':'gaussmf',[0.12 4.64851851851852]
+MF3='g':'gaussmf',[0.254735874243528 5.11]
+
+[Rules]
+2 2 3, 2 (1) : 1
+1 2 3, 2 (1) : 1
+1 2 2, 2 (1) : 1
+1 1 2, 2 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 2, 1 (1) : 1
+2 1 2, 2 (1) : 1
+2 1 3, 2 (1) : 1
+2 2 3, 3 (1) : 1
+2 2 2, 3 (1) : 1
+2 2 2, 2 (1) : 1
+2 3 3, 3 (1) : 1
+2 3 3, 2 (1) : 1
+3 3 3, 3 (1) : 1
+3 3 2, 3 (1) : 1
+3 2 2, 3 (1) : 1
+3 2 2, 2 (1) : 1
+3 3 2, 2 (1) : 1
+2 2 1, 2 (1) : 1
+1 1 1, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 1, 2 (1) : 1
+1 3 1, 2 (1) : 1
+2 3 1, 2 (1) : 1
+1 3 1, 1 (1) : 1
